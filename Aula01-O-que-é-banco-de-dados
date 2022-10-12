@@ -1,0 +1,39 @@
+Antes dos computadores os dados eram preenchidos em papeis, armazenados em pastas e guardados dentro de um
+arquivo metalico.
+Seguindo essa mesma linha, as fichas(papeis) são tratados como REGISTROS, as pastas são tratados como TABELAS
+e os armarios como ARQUIVOS.
+
+Pensando na estrutura de banco de dados, os ARQUIVOS guardam TABELAS e as TABELAS guardam os REGISTROS.
+Os arquivos antigamente eram guardados em fitas magneticas ou cartões perfurados, com uma estrutura 
+de arquivo sequencial.
+
+Depois das fitas, surgiram os DISCOS, no disco não era nescessario ler tudo até chegar em um certo ponto, no 
+disco era possivel ir direto nas informações atráves de INDICE, esse tipo de estrutura de arquivos, eram
+chamados de Arquivo de acesso direto.
+
+Banco de Dados e composto em quatro estruturas:
+    - Base de Dados
+    - Sistema Gerenciador | SGDB - Sistema Gerenciador de Banco de Dados
+    - Linguagem de exploração 
+    - Programas adicionais (como gerencia de usuários, otimizadores extras, etc).
+
+Alem do departamento de defesa dos estados unidos, a IBM foi muito valiosa para a construção e evolução
+dos bancos de dados.
+
+Os modelos hierarcicos e de rede foram os primeiros modelos sujeridos bem no inicio pela IBM.
+
+Hoje utilizamos bastante, e de inicio o modelo Relacional.
+
+A linguagem de exploração que utilizamos é a Structured Query Language (SQL), basicamente, SQL é uma linguagem
+de consulta, é uma linguagem que podemos dar comandos, intruções ao banco de dados e ele nos 
+retorna uma Query (Query é uma resposta a uma solicitação).
+
+Temos alguns exemplos de bancos de dados, como: 
+    - Oracle
+    - IBM
+    - dBase
+    - SQL Server
+    - MySQL
+    - MariaDB
+
+
