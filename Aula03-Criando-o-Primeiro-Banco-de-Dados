@@ -1,0 +1,59 @@
+Um banco de dados, são coleções de dados com caracteristicas separadas mas que estão organizadas
+em locais especificos.
+
+Banco de dados: São conjuntos de Tabelas.
+Tabelas: São conjuntos de Registros.
+
+Banco de Dados -> Tabelas -> Registros.
+
+Para criar um banco de dados em MySQL é muito simples, utilizamos o comando:
+
+    CREATE DATABASE nomedobancodedados;
+
+Dentro de um banco de dados também temos além de Tabelas, temos visões, procedimentos armazenados,
+funções.
+
+As caracteristicas que temos dentro dos registros são chamadas de CAMPOS.
+
+então temos:
+
+Banco de Dados -> Tabelas -> Registros -> Campos.
+
+No MySQL temos alguns tipos primitivos, sendo eles:
+
+    * Númerico, os tipos númericos se subdividem em:
+
+        Inteiro, Real e Lógico. ainda dentro dos subdivididos, temos precisões diferentes:
+            Inteiro - TinyInt (3bytes), SmallInt, Int(11bytes), MediumInt, BigInt - a diferença desses tipos e a 
+            quantidade de bytes utilizandos para armazenamento.
+            (ex. TinyInt utiliza muito menos dados que o BigInt por exemplo ).
+            
+            Real -> Decimal, Float, Double, Real
+
+            Lógico -> Bit, Boolean (ex. Sim ou não, 0 e 1)
+
+    * Data/Tempo -> Date, DateTime, TimeStamp, Time, Year
+
+    * Literal, outro tipo que se divide são os literais, são subdivididos em:
+        Caractere, Texto, Binário, Coleções. ainda dentro dos subdivididos, temos precisões diferentes:
+            Caractere -> Char, VarChar. (ex. VarChar utiliza-se nomes que variam a quantidade de caracteres)
+
+            Texto -> TinyText, Text, MediumText, LongText 
+
+            Binário -> TinyBlob, Blob, MediumBlob, LongBlob
+
+            Coleções -> Enum, Set
+
+
+    * Espacial -> Geometry, Point, Polygon, MultiPolygon
+
+Como os dados vão ser armazenados em discos, e preciso dimensionar muito bem a estrutura
+da nossa tabela. 
+
+então, seguindo após a criação do banco de dados, iremos criar a nossa primeira tabela, utilizando o camando:
+    
+    CREATE TABLE nometabela (
+    nomecampo tipo, 
+    nomecampo tipo,
+    nomecampo tipo,
+    );
