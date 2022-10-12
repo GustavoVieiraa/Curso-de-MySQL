@@ -1,0 +1,34 @@
+ MySQL é tão famoso no mundo que empresas como a NASA, Google, Adobe, Cisco, Ebay, todas as empresas de
+ telecomunicações, Bradesco, Exercito Brasileiro e HostNet.
+
+ MySQL é um Software de código LIVRE!
+
+ Dentro do MySQL utilizamos como linguagem de definição o DDL:
+    - Para criar um banco de dados
+    - Criar uma tabela
+    - Alterar esse banco de dados
+Qualquer comando de definição da estrutura da base de dados e mantida dentro do MySQL pela porção
+DDL dele.
+
+Temos também a porção DML, que é a porção de Manipulação:
+    - Para incluir novos dados
+    - Excluir os dados
+    - Manipular dados de qualquer maneira 
+    - Alterar dados
+Resumindo, a porção DML de manipulação, serve para manipular os dados.
+
+Temos a porção DQL que é de Solicitações
+    - através dessa porção podemos utilizar o famoso SELECT
+então, qualquer solicitação que for necessaria, a porção DQL quem nós atende.
+
+Temos também a porção DCL de controle:
+    - ela defini quem vai poder acessar o banco de dados
+    - que tipo de acesso o usuario podera fazer
+    - quais os comandos o usuario podera executar
+
+e por fim, temos a porção DTL de transações:
+    - Transação é qualquer solicitação feita a um banco de dados e ele vai te atender
+    da melhor maneira possivel, seguindo o DICA.
+    DICA - Durabilidade, Isolamento, Consistencia e Atomicidade.
+
+Finalizando realizando a instalação do Wamp server e MySQL
