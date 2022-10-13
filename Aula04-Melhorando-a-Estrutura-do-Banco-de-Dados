@@ -1,0 +1,40 @@
+Nessa aula vamos evoluir alguns dos comandos que aprendemos nas aulas anteriores,
+por exemplo otimizar a estrutura da tabela usando os comandos CREATE DATABASE e
+CREATE TABLE com suporte à acentuação de caracteres no MySQL.
+
+
+Para excluir/apagar um banco de dados, podemos utilizar o comando:
+    DROP DABASE nomedatabase;
+
+Para evoluir nosso banco de dados, vou incluir parametros em MySQL chamados de CONSTRAINTS.
+ex:
+    CREATE DATABASE nomedatabase
+    DEFAULT CHARACTER SET utf
+    DEFAULT COLLATE utf8_general_ci; - esse parametro chamados de COLLATION, utilizar também
+                                       para definição de caracteres. 
+
+Vamos evoluir também o conceito das nossas tabelas.
+ex:
+    CREATE TABLE nometable (
+        nomecampo,
+        nomecampo,
+        nomecampo,
+        nomecampo,
+    ) DEFAULT CHARSET = utf8; -> Utilizamos esse comando para definir quais caracteres serão
+                                suportados na estrutura da minha tabela.
+
+ex tabela de pessoas:
+    CREATE TABLE pessoas (
+        id int NOT NULL AUTO_INCREMENT,
+        nome varchar(30) NOT NULL, <- NOT NULL significa você ira ter que preencher os dados.
+        nascimento date,
+        sexo enum('M', 'F'), <- Essa estrutura de enum permite eu definir os valores aceitos.
+        peso decimal(5,2), <- exemplo: 5 é o total de casas, 2 são os números após a virgula.
+        altura decimal(3,2),
+        nacionalidade varchar(20) DEFAULT 'Brasil' -> Na nacionalidade, se ningúem digitar nada por padrão irá ser Brasil!
+        PRIMARY KEY (id)
+    ) DEFAULT CHARSET = utf8;
+
+
+Em toda tabela (exceto algumas exceções), temos que definir um campo que chamamos de
+CHAVE PRIMARIA, esse campo NUNCA se repete!
