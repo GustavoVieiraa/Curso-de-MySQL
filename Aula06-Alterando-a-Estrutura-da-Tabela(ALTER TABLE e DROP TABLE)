@@ -1,0 +1,92 @@
+Nessa aula vamos aprender a alterar a estrutura da nossa tabela, DDL (Data Definition Language).
+Hoje vamos ver dois novos comandos. 
+
+Primeiro, vamos aprender um comando para alterar a estrutura da Tabela:
+
+    ALTER TABLE nomedatabela;
+
+os Campos como aprendemos em MySQL são conhecidos como columns/colunas
+
+Para adicionar uma nova Coluna em nossa Tabela, vamos utilizar:
+ex.
+    ALTER TABLE pessoas
+    ADD COLUMN profissao varchar(10);
+
+Para ver os dados de uma tabela podemos utilizar um desses dois comandos:
+ex.
+    describe nometabela;
+            ou
+    desc nometabela;
+
+Para remover/excluir uma tabela em MySQL nos utilizamos o comando DROP TABLE:
+ex.
+    ALTER TABLE nometabela
+    DROP COLUMN nomecampo;
+
+Para escolher a posição onde queremos adicionar uma nova coluna, utilizamos o AFTER:
+ex.
+    ALTER TABLE nometabela
+    ADD COLUMN nomecampo AFTER nomecampo; <- A nova coluna será incluida após o campo informado em AFTER
+
+Para inclusão de colunas podemos utilizar:
+    ALTER TABLE nometabela
+    add column nomecampo; -> essa nova coluna será incluída no FIM da nossa tabela.
+
+    ALTER TABLE nometabela
+    add column nomecampo AFTER nome campo; -> essa nova coluna será inclusa após o campo informado.
+
+    ALTER TABLE nometabela
+    add column nomecampo int FRIST; -> essa nova coluna será inclusa no início.
+
+Para alterar as definições dentro da estrutura (Tipo primitivo e as constr) da nossa coluna, utilizamos MODIFY:
+ex.
+    ALTER TABLE nometabela
+    MODIFY COLUMN nomecampo novovalordocampo;
+
+
+Para nós RENOMEAR o nome de um campo/coluna, nós podemos utilizar o CHANGE COLUMN:
+ex.
+    ALTER TABLE nometabela
+    CHANGE COLUMN nomedocampo novonomedocampo;
+
+obs. Não podemos utilizar o CHANGE só para renomear a coluna, 
+temos que passar as constrantes e o tipo novamente.
+
+Agora para renomear o nome da tabela inteira, podemos utilizar o RENAME TO:
+ex.
+    ALTER TABLE nomedatabela
+    RENAME TO novonomedatabela;
+
+
+Para criar banco de dados mais aprimorados, temos novas constraintes também:
+ex.
+    UNIQUE -> Ele não permite criar dois campos com o mesmo nome.
+    UNSIGNED -> UNSIGNED significa sem sinal, isso significa que vai economizar 1 byte para
+    cada registro que tenha carga registrada.
+
+ex aplicação das constraintes:
+    create table if not exists cursos (
+    nome varchar(20) not null unique,
+    descricao text,
+    carga int unsigned,
+    totaulas int,
+    ano year default '2022'
+    ) default charset = utf8; 
+
+ 
+Para adicionar uma Chave Primaria a uma coluna utilizamos:
+ex. 
+    ALTER TABLE nometabela
+    ADD PRIMARY KEY(nomedacoluna);
+
+ex.
+    alter table cursos
+    add primary key(idcurso);
+
+
+Para excluir uma tabela nos podemos utilizar o comando:
+    DROP TABLE nomedatabela;
+
+
+E por fim, para se lembrar, os comandos ALTER TABLE e DROP TABLE são
+comandos DDL (Data Definition Language - Comandos de Definição de Linguagem)
