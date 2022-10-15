@@ -1,0 +1,43 @@
+Todo comando SQL que faz parte da estrutura de um banco de dados (ex. CREATE TABLE) é conhecido
+como um comando DDL (Data Definition Languague ou Linguagem de definição de dados) da linguagem SQL.
+Então, os comandos CREATE DATABASE e CREATE TABLE que nós vimos são comandos DDL, os comandos
+DDL são comandos de definição, eles quem definem a estrutura que você está criando.
+
+Para acessar nosso banco de dados pelo terminal Query utilizamos:
+    USE nomebancodedados;
+
+Para o banco de dados, o que está dentro de ' ' são DADOS!
+
+Para inserir dados em uma tabela, utilizamos os comandos:
+ex:
+    insert into pessoas
+    (id, nome, nascimento, sexo, peso, altura, nacionalidade)
+    values
+    ('1', 'Gustavo', '2003-02-24', 'M', '78.5', '1.73', 'Brasil');
+
+
+Para realizar uma pesquisa em MySQL podemos utilizar o comando:
+
+    select * from nomedatabela
+
+DEFAULT em MySQL significa PADRÃO.
+
+Para inserir dados, podemos utilizar diretamente a ordem dos campos que foi definido em sua
+estrutura e definir diretamente os valores:
+ex:
+    insert into pessoas values
+    (DEFAULT, 'Gabriela', '2005-09-17', 'F', '59.5', '1.68', 'Portugal');
+
+Podemos também incluir vários dados em Tabela em um unico comando:
+ex:
+    insert into pessoas values
+    (DEFAULT, 'Moises', '1999-04-09', 'M', '100.5', '1.82', DEFAULT),
+    (DEFAULT, 'Marcelo', '2001-01-14', 'M', '87', '1.74', DEFAULT),
+    (DEFAULT, 'Paulo', '1987-08-09', 'M', '92.5', '1.90', 'Estados Unidos');
+
+
+Por fim, o comando INSERT INTO ele é o nosso primeiro comando do 
+tipo DML (Data Manipulation Language). Os comandos de manipulação de dados, como o proprio exemplo
+do INSERT INTO é um comando do tipo DML.
+
+
