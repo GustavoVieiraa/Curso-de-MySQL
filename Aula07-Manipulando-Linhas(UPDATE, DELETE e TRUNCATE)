@@ -1,0 +1,70 @@
+Nessa aula 7, vamos aprender a manipular registros, podemos dizer também que estamos
+manipulando linhas ou manipulando tuplas, todos esses são sinonimos.
+Então, quando falamos de manipulação de REGISTROS, LINHAS ou TUPLAS, 
+estamos falando da mesma coisa.
+
+Temos de pensar sempre na estrutura como:
+
+    As linhas são as Tuplas ou Registros.
+    As colunas são nossos campos ou atributos.
+
+Para alterar o contéudo de uma linha, nós podemos utilizar:
+Ex.
+    UPDATE nometabela - aqui informamos a tabela que queremos atualizar
+    SET nomedacoluna = 'novo valor a ser incluido' - aqui informamos qual coluna queremos setar um novo valor.
+    WHERE nometabelaprimarykey = 'lugar da alteração'; - aqui vamos informar em qual linha, na coluna, 
+                                                                            vamos inserir o novo valor.
+
+    Ex em nossa tabela cursos.
+        UPDATE cursos <- tabela para atualizar algum dado,
+        SET nome = 'HTML4' <- coluna escolhida para atualizar o dado,
+        WHERE idcurso = '1'; <- onde vai ser atualizado o dado, orientado pela Primary Key
+
+Outro exemplo onde podemos alterar mais de 1 dado da nossa linha, ao mesmo tempo:
+Ex.
+    UPDATE nometabela
+    SET nomedacoluna = 'novo valor a ser incluido', nomedacoluna = 'no valor a ser incluido'
+    WHERE nometabelaprimarykey = 'lugar da alteração'
+    LIMIT numerodelinhas; <- utilizamos o LIMIT para limitar o número de linhas que poderão sofrer
+    essa alteração.
+
+Para deletarmos uma linha nós podemos utilizar o comando:
+Ex.
+    DELETE FROM nomedatabela
+    WHERE primarykey = 'numero da linha da primary key';
+    Ex. 
+        DELETE FROM cursos
+        WHERE idcurso = '8';
+
+Para deletarmos varias linhas juntas utilizando alguma coluna em com valores iguais, podemos utilizar:
+Ex. 
+    DELETE FROM nomedatabela
+    WHERE nomecoluna = 'valores das colunas semelhantes'
+    LIMIT numero de linhas;
+    Ex. 
+        DELETE FROM cursos
+        WHERE ano = '2050'
+        LIMIT 3;
+
+
+Para deletar todos os dados de uma tabela nós utilizamos o comando TRUNCATE:
+Ex.
+    TRUNCATE TABLE nomedatabela; ou TRUNCATE nomedatabela; <- os dois comandos tem a mesma funcionalidade.
+
+Agora, vamos classificar os comandos novos que aprendemos
+UPDATE, DELETE e TRUNCATE, e verificar se eles pertencem aos DDL (Data Defition Language) 
+ou DML (Data Manipulation Language).
+
+O comando UPDATE ele mexe nas linhas, ou seja, ele manipula dados, fazendo parte dos DML.
+O comando DELETE apaga os dados, ele não mexe nas estruturas ou apaga as estruturas, então também faz parte dos DML.
+O comando TRUNCATE ele apaga todos os dados, mas também mantem a sua estrutura, sendo assim, ele faz parte dos DML.
+
+Qual a diferença entre os comandos TRUNCATE e o DROP TABLE? 
+Se os dois apagam, porque são classificados de forma diferente, um como DDL outro como DML?
+
+A diferença é que o DROP TABLE ele apaga os dados da TABELA e também apaga a sua ESTRUTURA,
+por isso ele é classificado um comando DDL (Data Definition Language), não por apagar os dados,
+ mas por mexer na ESTRUTURA e apagá-la.
+
+Já o TRUNCATE ele apaga todos os dados somente, mas não mexe na estrutura da TABELA, por isso, é
+classificado como DML (Data Manipulation Language).
