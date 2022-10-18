@@ -1,0 +1,37 @@
+Nessa aula, vamos aprender como 
+
+
+Para visualizar os DATABASES/BANCO DE DADOS pelo terminal utilizamos:
+
+    show databases;
+
+
+Para verificar qual BANCO DE DADOS estamos UTILIZANDO no momento pelo terminal:
+
+    status; <- observe o current database, ele ira informar qual banco de dados está em aberto.
+
+
+Para abrir um BANCO DE DADOS, utilizamos o comando:
+
+    use nomebancodedados;
+
+
+Para verificar as TABELAS do banco de dados selecionado, utilizamos:
+
+    show tables;
+
+Para verificar a estrutura de uma TABELA, utilizamos o comando:
+
+    describe nometabela ou desc nometabela; <- os dois comandos são iguais.
+
+o PHPMyAdmin é uma aplicação WEB que tem o objetivo de facilitar e automatizar
+a criação de banco de dados em MySQL.
+
+As ferramente que escolhermos, PHPMyAdmin, Workbench ou o Terminal, 
+elas server apenas para manipular os nossos dados. 
+Os nossos dados e a estrutura deles estão dentro do SERVIDOR!
+
+E para extrair os dados de dentro de um servidor como aprendemos
+anteriormente, temos que gerar o DUMP.
+
+
