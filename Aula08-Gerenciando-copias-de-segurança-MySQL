@@ -1,0 +1,28 @@
+Nessa aula 08, vamos aprender como fazer Cópias de Segurança e como Gerenciar
+essas cópias de segurança diretamente do nosso MySQL, utilizando o Workbeach.
+
+Dentro no nosso ambiente workbeach, vamos clicar em:
+
+    Server -> Data Export 
+
+o Backup de um banco de dados nos chamamos de DUMP.
+normalmente, quando queremos tratar um banco de dados de um outro cliente/empresa
+nós solicitamos o DUMP do servidor, para tratar em nosso servidor.
+
+Para pegarmos somente a estrutura, sem os dados utilizamos o:
+    DUMP STRUCTURE ONLY
+
+Para pegarmos somente os dados, vamos utilizar:
+    DUMP DATA ONLY
+
+E para pegar a estrutura e os dados, utilizamos:
+    DUMP STRUCTURE AND DATA
+
+
+Basicamente, de forma bem simplificada, um DUMP é o passo a passo do que foi
+feito para o banco de dados chegar no resultado que se encontra no PRESENTE.
+
+E para importar um DUMP é basicamente o mesmo passo a passo:
+
+    Server - Data import
+
