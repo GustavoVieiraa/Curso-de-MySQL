@@ -1,0 +1,15 @@
+Nessa aula, como diversos Host de hospedagem de sites utilizam o 
+PHPMyAdmin como gerenciador de banco de dados, estamos aprendendo
+a utilizar a ferramente e como criar e estruturar um banco de Dados através dela.
+
+Para verificar o comando que foi utilizado para criar um banco de dados, utilizamos:
+
+    show create database NOME_BANCO_DADOS;
+
+Para verificar o comando que foi utilizado para criar uma tabela, utilizamos:
+
+    show create table NOME_TABELA;
+
+Aprendi nessa aula também, como manipular dados, criar um novo banco de dados,
+e realizar um DUMP dentro da ferramenta phpMyAdmin.
+
