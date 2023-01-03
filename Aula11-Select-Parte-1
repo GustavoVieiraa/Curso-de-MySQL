@@ -1,0 +1,35 @@
+ Nessa aula vamos aprender diversos comandos dentro do nosso SELECT.
+
+ Para ordenar nossos campos em ordem Crescente, utilizamos:
+    SELECT * FROM NomeTabela
+    ORDER BY NomeCampo;
+
+Para ordenar nossos campos em ordem Decrescente, utilizamos:
+    SELECT * FROM NomeTabela
+    ORDER BY NomeCampo DESC;
+
+Para filtrar e trazer somente as colunas que nos precisamos, utilizamos:
+    SELECT NomeColuna, NomeColuna, NomeColuna from NomeTabela;
+
+Para selecionar somente algo expecifico em um Campo da nossa tabela, utilizamos:
+    SELECT * FROM NomeTabela
+    WHERE NomeCampo = 'O que eu procuro';
+
+Podemos utilizar também o where com um operador relacional, assim:
+    SELECT NomeColuna, NomeColuna FROM NomeTabela
+    WHERE NomeColuna >= '2020';
+
+Para verificar algo entre valores (Range, ou faixa de valores), nos utilizamos o BETWEEN, veja:
+    SELECT * FROM NomeTabela
+    WHERE NomeColuna BETWEEN 2020 and 2022;
+
+Para verificar valores especificos, nos utilizamos o IN:
+    SELECT * FROM NomeTabela
+    WHERE NomeColuna IN (2022, 2019);
+
+Também podemos utilizar operadores Lógicos para fazer nossas buscas:
+    SELECT * FROM NomeTabela
+    WHERE NomeColuna > 30 and NomeColuna < 120;
+
+E o nosso SELECT faz parte da classificação de DML (Data Manipulation Language).
+Em alguns livros o SELECT faz parte de uma nova classificação, o DQL (Data Query Language).
