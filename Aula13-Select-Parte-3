@@ -1,0 +1,11 @@
+ Nessa aula vamos aprender diversos comandos dentro do nosso SELECT,
+ para obter dados dentro das tabelas.
+
+Para realizar o Agrupamento de Registros, nós temos o GROUP, ex:
+    SELECT * FROM jogadores
+    GROUP by peso;
+
+
+ 
+
+
