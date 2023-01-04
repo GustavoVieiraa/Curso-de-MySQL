@@ -1,0 +1,46 @@
+ Nessa aula vamos aprender diversos comandos dentro do nosso SELECT,
+ para obter dados dentro das tabelas.
+
+
+ Para pegar dados com filtro a partir de uma letra ou palavra, podemos utilizar 
+
+ o operador LIKE, exemplo:
+    SELECT * FROM cursos
+    WHERE nome LIKE 'a%';
+LIKE significa PARECIDO nessa situação // % ele substitui nenhum, ou varios caracteres.
+
+Para pegar dados com um filtro de ocorrencia unica, utilizamos o DISTINCT:
+
+    SELECT DISTINCT carga FROM cursos
+    ORDER BY carga;
+
+Para verificar quantidades de algo que queremos saber, quantidade de pessoas com 'silva' no nome,
+pessoas com 18 anos, nos podemos utilizar a função de agregação, COUNT():
+
+    SELECT count(*) FROM cursos;
+
+Para verificar o maximo dentro de alguma coluna, nos utilizamos a função de agregação MAX(), ex:
+
+    SELECT MAX(peso) FROM jogadores;
+
+Para verificar o minimo dentro de alguma coluna, nos utilizamos a função de agregação MIN(), ex:
+
+    SELECT MIN(peso) FROM jogadores;
+
+Para realizar a soma de alguma coluna, nos utilizamos a função de agregação SUM, ex:
+
+    SELECT SUM(peso) FROM jogadores;
+
+Para verificar a média de alguma coluna, nos utilizamos a função de agregação AVG, ex:
+
+    SELECT AVG(peso) FROM jogadores;
+
+
+
+
+
+
+
+
+
+
