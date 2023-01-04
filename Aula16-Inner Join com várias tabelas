@@ -1,0 +1,27 @@
+Para termos esse conceito de muitos para muitos, vamos ter que criar
+uma nova entidade para receber os id's primary key e tratar lá dentro,
+relacionando entre si.
+
+Aqui temos um exemplo de um Inner Join:
+
+    create table jogadores_assiste_cursos (
+    id int not null auto_increment,
+    data date,
+    idjogadores int,
+    idcurso int,
+    primary key (id),
+    foreign key (idjogadores) references jogadores(id),
+    foreign key (idcurso) references cursos(idcurso)
+    ) default charset = utf8;
+
+práticado durante a aula.
+
+ e como vamos juntas os dados de uma tabela e outra para conseguir
+ exibir elas? simples utilizando as JUNÇÕES.
+ex:
+    select j.nome, c.nome from jogadores as j
+    join jogadores_assiste_cursos as a
+    on j.id = a.idjogadores
+    join cursos as c
+    on a.idcurso = c.idcurso;
+
