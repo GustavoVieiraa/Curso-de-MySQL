@@ -1,0 +1,69 @@
+Nessa aula, vamos finalmente começar a relacionar nossas tabelas.
+
+Mas, antes precisamos entender o que são as ENGINES.
+
+Uma Engine é uma maquina de criação de tabelas, e sua principal caracteristica
+e suportar chaves estrangeiras.
+e temos algumas Engines que fazem isso, como por exemplo:
+
+    - InnoDB
+    - MyISAM
+    - XtraDB
+
+Uma boa ENGINE, suporta ACID que são as quatro principais regras
+de uma boa transação:
+
+obs. Transação é tudo aquilo que você pode pedir para o banco de dados
+e ele executar e te retornar uma resposta é considerado uma transação.
+
+A - Atomicidade, ela não pode ser subdivida em subtarefas. ou seja,
+se você tem uma tarefa a fazer, ou toda tarefa é feita, ou não é feita.
+ou TUDO acontece, ou nada é considerado.
+ex. Sua mãe chega é manda você arrumar seu quarto, ou você arruma o seu quarto, ou não arruma.
+não existe a opção arrumar só metade.
+
+C - Consistência, se antes de fazer a transação o banco de dados estava tudo certo, logo,
+após fazer a transação, o banco de dados tem que permanecer tudo certo.
+Não pode ocorrer falhas, ou consistencias.
+
+I - Isolamento, o MySQL é um banco de dados multifuncionamento e multi-usuario, ou seja,
+ele está acontecendo ao mesmo tempo, mas a solicita de um usuario, não pode atrapalhar,
+ou resultar na de outro usuario.
+
+D - Durabilidade, uma transação, ela tem que ser duravel, ou seja, ela tem que durar
+o tempo que for necessario.
+
+então para que uma transação possa acontecer, ela tem que ser Atomica, Consistente, Isolada e Duravel.
+Isso é um principio fundamental na teoria de banco de dados.
+
+Para adicionar uma coluna, vamos utilizar o comando:
+
+    ALTER TABLE nomeTabela
+    ADD COLUMN nomeColuna Tipo; obs. o Tipo tem que ser do mesmo tipo que vai ser recebido os
+                                    Dados da nossa Foreign Key.
+
+Para adicionar a nossa chave estrangeira (Foreign Key), vamos utilizar o comando:
+
+    ALTER TABLE nomeTabela
+    ADD FOREIGN KEY (nomeColuna)
+    REFERENCES nomeTabela (nomeColuna);
+
+    ex. 
+    ALTER TABLE jogadores
+    ADD FOREIGN KEY (cursopreferido)
+    REFERENCES cursos (idcursos);
+
+sempre ao utilizar um JOIN para integrar, temos que utilizar o ON para dar sentido a nossa,
+integração, através do Primary Key e Foreign Key.
+    ex.
+
+        SELECT jogadores.nome, cursos.nome, cursos.ano
+        FROM jogadores JOIN cursos
+        ON cursos.idcurso = jogadores.cursopreferido;
+
+
+
+
+
+
+
