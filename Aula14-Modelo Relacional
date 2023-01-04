@@ -1,0 +1,32 @@
+Nessa aula vamos aprender como se comporta, o modelo relacional.
+
+O modelo relacional, começa a ser possível a partir do 
+DER (Diagrama Entidade Relacionamento).
+
+Se formos criar um projeto um pouco menor com menos necessidade de uma estrutura
+como um grande banco de dados, tudo certo, não precisamos nos preocupar em ter
+a estrutura de um banco de dados Relacional.
+
+Mas para uma estrutura um pouco maior, precisamos pensar sim, no Modelo Relacional.
+
+E temos diversos tipos de Relacionamentos:
+    muitos-para-muitos (n para n);
+    um-para-um (1 para 1);
+    um-para-muitos (1 para n);
+
+Então, para estruturar meu banco de dados, meu primeiro passo é
+modelar as entidades do meu banco, com seus atributos e seus relacionamentos,
+e depois classificar cada um de seus relacionamentos.
+
+Então, na prática, como podemos trabalhar com o modelo relacional.
+Bem, esse modelo só é possível graças as nossas Primary Key, nossas
+chaves Primarias e as chaves estrangeiras.
+
+E o que é chave estrangeira?
+Chave estrangeira é a chave Primaria de alguém.
+
+
+
+
+
+
