@@ -6,3 +6,4 @@ Pratiquei diversos comandos como:
  * -> USE, INSERT INTO,  SELECT * FROM, ALTER TABLE,
  * -> MODIFY, ADD, AS, UPDATE, DELETE, TRUNCATE, entre diversos outros.
 >Foram tantos que fica até difícil de listar, e ao agradecer, tenho o Professor Gustavo Guanabara (meu xará) o qual é minha referência, com sua excelente didática, dinâmica, e métodos, me ensinou os conceitos básicos/intermediários para começar a aplicar em meus projetos.
+!(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fen%2Fsearch%3Fq%3Dmysql&psig=AOvVaw047x5HhGVz6sO_Q3ff_NqB&ust=1672965256705000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJC0wLGXr_wCFQAAAAAdAAAAABBE)
