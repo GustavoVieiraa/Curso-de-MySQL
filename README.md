@@ -5,4 +5,4 @@ Pratiquei diversos comandos como:
  * -> CREATE DATABASE, CREATE TABLE.
  * -> USE, INSERT INTO,  SELECT * FROM, ALTER TABLE,
  * -> MODIFY, ADD, AS, UPDATE, DELETE, TRUNCATE, entre diversos outros.
-Foram tantos que fica até difícil de listar, e ao agradecer, tenho o Professor Gustavo Guanabara (meu xará) o qual é minha referência, com sua excelente didática, dinâmica, e métodos, me ensinou os conceitos básicos/intermediários para começar a aplicar em meus projetos.
+>Foram tantos que fica até difícil de listar, e ao agradecer, tenho o Professor Gustavo Guanabara (meu xará) o qual é minha referência, com sua excelente didática, dinâmica, e métodos, me ensinou os conceitos básicos/intermediários para começar a aplicar em meus projetos.
